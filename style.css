@@ -1,0 +1,74 @@
+body{
+    margin-left: -30px;
+    background-color: rgb(38, 134, 243);
+    
+}
+.slider{
+margin: 10px 60px;
+width: 310px;
+height: 300px;
+overflow: hidden;
+border: 2px solid rgb(0, 0, 0);
+border-radius: 50px;
+
+}
+
+.slides{
+width: 400%;
+height: 400px;
+display: flex;
+}
+
+.slides input {
+ display: none;
+}
+
+.slide{
+ width: 25%;
+ position: relative;
+ transition: 2s;
+}
+
+.slide img{
+    width: 100%;
+    height: 80%;
+
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -50%;
+}
+
+#radio4:checked ~ .first{
+    margin-left: -75%;
+}
+
+.txt h1{
+ margin-left: 145px;
+ color: rgb(0, 0, 0);
+ 
+}
+
+
+.temp{
+margin-left: 140px ;
+margin-top: -50px; 
+
+} 
+
+.temp1 h2{
+margin-left: 170px;
+
+}
+
+.tem2 h4{
+    margin-left: 60px;
+    margin-top: -10px;
+}
