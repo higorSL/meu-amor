@@ -133,3 +133,41 @@ setInterval(updateCounter, 1000);
 updateCounter();
 
 window.addEventListener('load', initSlider);
+
+const audio = document.getElementById('audio');
+    const barra = document.getElementById('barra');
+    const btnPlayPause = document.getElementById('btnPlayPause');
+
+    function tocarOuPausar() {
+      if (audio.paused) {
+        audio.play();
+        btnPlayPause.innerHTML = '&#10073;&#10073;'; // ⏸
+      } else {
+        audio.pause();
+        btnPlayPause.innerHTML = '&#9654;'; // ▶
+      }
+    }
+
+    function retroceder() {
+      audio.currentTime = 0;
+    }
+
+    function avancar() {
+      audio.currentTime = audio.duration;
+    }
+
+    function mudarTempo(valor) {
+      audio.currentTime = (valor / 100) * audio.duration;
+    }
+
+    audio.ontimeupdate = () => {
+      const percent = (audio.currentTime / audio.duration) * 100;
+      barra.value = percent;
+
+      // Atualiza visual da barra manualmente
+      barra.style.background = `linear-gradient(to right, red 0%, red ${percent}%, #aaa ${percent}%, #aaa 100%)`;
+    };
+
+    audio.onended = () => {
+      btnPlayPause.innerHTML = '&#9654;';
+    };
