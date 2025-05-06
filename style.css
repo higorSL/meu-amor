@@ -226,3 +226,59 @@ body {
     max-width: 500px;
   }
 }
+
+.player {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid red;
+  box-shadow: 0 0 10px red;
+  background-color: transparent;
+  border-radius: 10px;
+  padding: 10px 15px;
+  width: 320px;
+}
+
+.controls {
+  display: flex;
+  gap: 8px;
+}
+
+button {
+  background: none;
+  border: none;
+  color: red;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+button:hover {
+  color: white;
+}
+
+input[type="range"] {
+  flex: 1;
+  height: 6px;
+  border-radius: 5px;
+  background: linear-gradient(to right, red 0%, red 0%, #aaa 0%, #aaa 100%);
+  outline: none;
+  -webkit-appearance: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background: red;
+  cursor: pointer;
+  margin-top: -3px;
+}
+
+input[type="range"]::-moz-range-thumb {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background: red;
+  cursor: pointer;
+}
